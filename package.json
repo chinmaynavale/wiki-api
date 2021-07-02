@@ -1,0 +1,28 @@
+{
+  "name": "wiki-api",
+  "version": "1.0.0",
+  "description": "A REST API Project By using Node and Express",
+  "main": "app.js",
+  "scripts": {
+    "devStart": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinmaynavale/wiki-api.git"
+  },
+  "author": "Chinmay Navale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chinmaynavale/wiki-api/issues"
+  },
+  "homepage": "https://github.com/chinmaynavale/wiki-api#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.0"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
