@@ -74,4 +74,25 @@ router.patch('/:articleTitle', async (req, res) => {
   }
 });
 
+router.delete('/', async (req, res) => {
+  try {
+    await Article.deleteMany({}, err => {
+      if (!err) res.send('Successfully deleted all articles');
+    });
+  } catch (err) {
+    res.status(400).send({ message: err.message });
+  }
+});
+
+router.delete('/:articleTitle', async (req, res) => {
+  try {
+    await Article.deleteOne({ title: req.params.articleTitle }, err => {
+      if (!err)
+        res.send(`Successfully deleted article on ${req.params.articleTitle}`);
+    });
+  } catch (err) {
+    res.status(400).send({ message: err });
+  }
+});
+
 module.exports = router;
